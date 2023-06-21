@@ -1,0 +1,1608 @@
+
+/*=========================================================
+
+						GENERALES
+
+=========================================================*/
+
+*{
+
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Slab', serif;
+}
+li{
+
+	list-style: none;
+}
+
+a{
+
+	text-decoration: none;
+}
+
+
+
+/*=========================================================
+
+						UTILIDADES
+
+=========================================================*/
+
+.contenedor{
+
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+
+}
+
+.boton{
+
+	background-color: white;
+	color: #282828;
+	padding: 1rem 3.5rem;
+	border-radius: 2rem;
+	font-size: 17px;
+
+	transition: all .3s;
+
+
+}
+
+.boton:hover{
+
+	background-color: #00387A;
+	color: white;
+}
+
+.parrafo-descripcion{
+
+	font-size: 17px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #888888;
+
+}
+
+
+.enlace-rojo{
+
+	color: #F56047;
+	text-decoration: underline;
+	transition: all .5s;
+
+
+}
+
+.enlace-rojo:hover{
+
+	text-decoration: none;
+
+}
+
+
+.enviar{
+
+	font-size: 15px;
+}
+
+.icono-servicios{
+
+	font-size: 3.5rem;
+	color: #84ADEA;
+	margin-bottom: 1rem;
+}
+
+
+
+.cart:hover .icono-servicios{
+
+	color: white;
+} 
+
+
+/*=========================================================
+
+						HEADER
+
+=========================================================*/
+
+header{
+
+	background-image: url("../imagenes/portada-3.jpg");
+	background-image: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	min-height: 120vh;
+
+	
+	/*transition: all 10s;*/
+
+	position: relative;
+	overflow: hidden;
+
+
+	margin-bottom: 10rem;
+}
+
+
+img.fondo-header{
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 100%;
+
+
+	object-position: center top;
+	object-fit: cover;
+
+	animation: animarImagenHeader 20s  infinite;
+
+}
+
+
+@keyframes animarImagenHeader{
+
+
+
+	0%,50%{
+
+		opacity: 1;
+
+
+	}
+
+	55%,90%{
+
+		opacity: 0;
+
+	}
+
+	95%,100%{
+
+		opacity: 1;
+	}
+
+
+}
+
+/*======================BARRA BLANCA========================*/
+.barra-blanca{
+
+	display: flex;
+	flex-direction: column;
+	row-gap:1.5rem;
+
+	padding: 2rem 0;
+
+	position: relative;
+	z-index: 100;
+	transition: all .5s;
+
+
+}
+
+/*====================================================
+
+CREO LA SIGUIENTE CLASE PARA FIJAR A LA BARRA
+DE COLOR BLANCO . Y ESTA CLASE SE AGREGARA A LA BARRA
+BLANCA CUANDO NOSOTROS HAGAMOS SCROLL
+
+=======================================================*/
+.pintar-barra-blanca{
+
+	background: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem 0;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.6);
+	
+
+}
+
+.pintar-barra-blanca a , 
+.pintar-barra-blanca p
+{
+
+	color: #32303C!important;
+
+}
+
+/*=============CONTENEDOR DEL BUSCADOR Y NÚMERO DE TELEFONO===============*/
+
+.contenedor-buscador-numero{
+
+	display: flex;
+	column-gap: 2rem;
+	color: white;
+	font-size: 1.3rem;
+	justify-content: flex-end;
+	align-items: center;
+
+}
+
+.contenedor-buscador-numero p.buscador{
+
+	font-size: 16px;
+	font-weight: 400;
+	transition: all .3s;
+
+
+}
+
+.contenedor-buscador-numero p.buscador:hover{
+
+	color: #6182FE;
+	cursor: pointer;
+
+
+}
+
+
+
+.contenedor-buscador-numero p.numero{
+
+	font-weight: 300;
+
+}
+
+/*=============CONTENEDOR DEL LOGO Y LA BARRA DE NAVEGACION===============*/
+
+
+.contenedor-logo-navegacion{
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.contenedor-logo-navegacion img.logo{
+
+	width: 170px;
+
+
+
+}
+
+
+
+
+.contenedor-logo-navegacion nav.barra-navegacion{
+
+	display: flex;
+	column-gap: 2.5rem;
+
+}
+
+.contenedor-logo-navegacion nav.barra-navegacion a{
+
+
+	color: white;
+	font-size: 18px;
+	font-weight: 400;
+
+}
+
+/*======================CONTENIDO========================*/
+
+.contenido{
+
+	color: white;
+	width: 600px;
+	margin-top: 11rem;
+
+	
+}
+.contenido h1,
+.contenido h2,
+.contenido p,
+.contenido .boton{
+
+	transition: all .2s;
+
+	position: relative;
+
+	top: 2rem;
+
+
+}
+
+
+.contenido h1{
+
+	font-size: 22px;
+	font-weight: 300;	
+
+	animation: animarTitulo1 50s forwards infinite;
+
+
+}
+
+.contenido h1 span{
+
+	display: inline-block;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	width: 80px;
+	margin-left: 2rem;
+
+}
+
+.contenido h2{
+
+	font-size: 3.5rem;
+	font-weight: 400;
+
+
+
+	animation: animarTitulo2 50s forwards infinite;
+
+}
+
+.contenido h2 span{
+
+	font-weight: 300;
+}
+
+.contenido p{
+
+	
+	animation: parrafo 50s forwards infinite;
+	margin-top: 1rem;
+	color: white;
+	
+}
+
+
+.contenedor-contenido-boton .boton{
+
+
+	
+	position: relative;
+	top:4rem; 
+	animation: boton 50s forwards infinite;
+	
+
+
+}
+
+@keyframes animarTitulo1 {
+
+	/*1% =0.5s  */
+
+	0% , 2%{
+
+		top: 2rem;
+		opacity: 0;
+
+	}
+
+
+	3% , 23%{
+
+		top: 0;
+		opacity: 1;
+
+	}
+
+
+	24% , 28%{
+
+		top: 2rem;
+		opacity: 0;		
+
+	}
+
+	29%{
+
+		top: 0;
+		opacity: 1;
+
+	}
+
+
+	100%{
+
+		top: 0;
+	}
+
+}
+
+
+
+@keyframes animarTitulo2 {
+
+	/*1% = 0.5s*/
+	0% , 1% {
+
+		top: 2rem;
+		opacity: 0;
+
+	}
+
+
+	2%,23%{
+
+
+		top: 0;
+		opacity: 1;
+	}
+
+	24%,27%{
+
+	
+		top: 2rem;
+		opacity: 0;		
+
+	}
+
+	28%{
+
+		top: 0;
+		opacity: 1;
+
+	}
+
+
+	100%{
+
+		top: 0;
+	}
+
+}
+
+
+@keyframes parrafo {
+
+	0% , 2%{
+
+		top: 2rem;
+		opacity: 0;
+
+	}
+
+
+	3%,23%{
+
+		top: 0;
+		opacity: 1;
+
+	}
+
+	24% , 28%{
+
+		top: 2rem;
+		opacity: 0;		
+
+	}
+
+	29%{
+
+		top: 0;
+		opacity: 1;
+
+	}
+
+
+	100%{
+
+		top: 0;
+	}
+
+}
+
+
+
+@keyframes boton {
+
+	0% , 3%{
+
+		top: 6rem;
+		opacity: 0;
+
+	}
+
+
+	4%,23%{
+
+		top: 4rem;
+		opacity: 1;
+
+	}
+
+	24% , 29%{
+
+		top: 6rem;
+		opacity: 0;		
+
+	}
+
+	30%{
+
+		top: 4rem;
+		opacity: 1;
+
+	}
+
+
+	100%{
+
+		top: 4rem;
+	}
+
+}
+
+
+/*======================CONTACTANOS========================*/
+
+.contactanos{
+
+	background: red;
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+	z-index: 1000;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 4rem;
+
+
+	transform: translateY(50%);
+
+	box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+
+/*=========================================================
+
+						
+					NUESTROS SERVICIOS
+
+=========================================================*/
+
+
+.nuestros-servicios{
+
+	display: flex;
+	column-gap: 3rem;
+	margin-bottom: 10rem;
+
+}
+
+
+/*====================CONTENEDOR TEXTO====================*/
+
+.nuestros-servicios .contenedor-texto{
+
+	width: 25%;
+
+}
+
+.nuestros-servicios .contenedor-texto h2{
+
+	font-size: 2.5rem;
+	color: #172460;
+
+}
+
+
+/*====================CONTENEDOR CARTAS====================*/
+.nuestros-servicios .carts{
+
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+}
+
+
+/*====================CONTENEDOR CARTA====================*/
+
+
+.nuestros-servicios .carts .cart{
+
+
+	width: 30%;
+	padding: 2rem 1rem 2rem 1rem;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	row-gap:1rem;
+	margin-bottom: 3rem;
+
+	transition: all .5s;
+
+	cursor: pointer;
+}
+
+.nuestros-servicios .carts .cart:hover{
+
+
+	background: #4342A4;
+	color: white!important;
+
+}
+
+/*====================ELEMENTOS DEL CONTENEDOR CARTA====================*/
+
+.nuestros-servicios .carts .cart img{
+
+	width: 30%;
+
+}
+
+.nuestros-servicios .carts  .cart h3{
+
+	color: #172460;
+	font-size: 25px;
+
+}
+
+.nuestros-servicios .carts .cart p{
+
+	font-size: 16px;
+
+}
+
+
+.nuestros-servicios .carts  .cart:hover p,
+.nuestros-servicios .carts  .cart:hover h3{
+
+	color: white;
+}
+
+.nuestros-servicios .carts .cart .imagen-clara{
+
+	display: none;
+}
+
+
+.nuestros-servicios .carts .cart:hover .imagen-clara{
+
+	display: block;
+	
+
+}
+
+.nuestros-servicios .carts .cart:hover .imagen-oscura{
+
+	display: none;
+
+}
+/*=========================================================
+
+						NOSOTROS
+=========================================================*/
+
+
+.nosotros{
+
+	overflow: hidden;
+}
+
+
+/*===============CONTENEDOR DEL TEXTO Y DE LA IMÁGEN===================*/
+
+.contenedor-texto-imagen{
+
+
+	display: grid;
+	grid-template-columns: 55% 45%; 
+	align-items: start; 
+	
+}
+
+/*======================CONTENEDOR DEL TEXTO========================*/
+
+.contenedor-texto-imagen .contenedor-texto{
+
+	display: flex;
+	flex-direction: column;
+	row-gap:2rem;
+}
+
+/*============eELEMENTOS DEL CONTENEDOR DEL TEXTO=================*/
+
+.contenedor-texto-imagen .contenedor-texto h2{
+
+	font-size: 16px;
+	color: #BEBECD;
+	
+}
+
+.contenedor-texto-imagen .contenedor-texto h3{
+
+	font-size: 35px;
+	color: #172460
+
+}
+
+
+.contenedor-texto-imagen .contenedor-texto h3 span{
+
+	font-weight: 300;
+
+}
+
+
+
+.contenedor-texto-imagen .contenedor-texto .boton{
+
+	background: #6E56CD;
+	width: 210px;
+	color: white;
+	
+	
+}
+
+
+.contenedor-texto-imagen .contenedor-texto .boton:hover{
+
+	
+	background: #4B51B9;
+	
+}
+/*======================CONTENEDOR DE LA IMÁGEN========================*/
+
+.contenedor-imagen img{
+
+	width: 143%;
+
+}
+
+
+
+/*=========================================================
+
+					ADMINISTRAR SERVICIOS
+
+=========================================================*/
+
+.administrar-servicios{
+
+	background-color: #242346;
+	margin-top: 6rem;
+
+}
+
+
+.administrar-servicios div.contenedor{
+
+	position: relative;
+}
+
+/*============CONTENEDOR TEXTO=================*/
+
+.administrar-servicios .contenedor-texto{
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 4rem 0 3rem 0;
+}
+
+
+/*============ELEMENTOS DEL CONTENEDOR TEXTO=================*/
+
+.administrar-servicios .contenedor-texto h2{
+
+	color: white;
+	font-size: 2rem;
+}
+
+
+.administrar-servicios .contenedor-texto p{
+
+	color: #A7A7B5;
+	width: 60%;
+}
+
+
+/*============CONTENEDOR DE MIS SERVICIOS=================*/
+
+
+
+
+
+/*============ELEMENTOS DEL CONTENEDOR DE MIS SERVICIOS===========*/
+
+
+.administrar-servicios .mis-servicios ul{
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.administrar-servicios .mis-servicios ul li{
+
+	
+	background: white;
+	width: calc(100%/6);
+	padding: 2rem 1rem;
+	text-align: center;
+	border-right: 2px solid black;
+
+}
+
+.administrar-servicios .mis-servicios ul li:last-child{
+	
+	
+	border-right: none;
+
+}
+
+
+
+.administrar-servicios .mis-servicios ul li h3{
+
+	text-align: center;
+}
+
+.administrar-servicios .mis-servicios  a{
+
+	
+	text-align: center;
+	font-weight: 300;
+
+	padding: 2rem 0 4rem 0;
+	display:inline-block;
+	width: 100%;
+	margin-bottom: 6rem;
+
+}
+
+
+/*============CONTENEDOR NEGOCIOS PERSONAS===========*/
+
+
+
+.administrar-servicios .contenedor-negocios-personas{
+
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom:-40%;
+	width: 100%;
+
+}
+
+
+
+
+
+/*============ELEMENTOS DEL CONTENEDOR DE NEGOCIOS Y PERSONAS======*/
+
+.administrar-servicios .contenedor-negocios-personas .negocios,
+.administrar-servicios .contenedor-negocios-personas .personas{
+
+	background: white;
+	padding: 3rem 2rem 3rem 2rem;
+	width: 50%;
+}
+
+.administrar-servicios .contenedor-negocios-personas .personas{
+
+
+	background: blue;
+}
+
+/*============ELEMENTOS DEL CONTENEDOR DE NEGOCIOS===============*/
+
+.administrar-servicios .contenedor-negocios-personas .negocios .boton{
+
+	background: #0AB3E4;
+	color: white;
+	box-shadow:1px 1px 20px #0AB3E4;
+	transition: all .5s;
+}
+
+.administrar-servicios .contenedor-negocios-personas .negocios .boton:hover{
+
+	box-shadow:none;
+
+}
+
+/*============ELEMENTOS DEL CONTENEDOR DE PERSONAS===============*/
+
+.administrar-servicios .contenedor-negocios-personas .personas .boton{
+
+	background: white;
+	color: #3F5087;
+}
+
+
+.administrar-servicios .contenedor-negocios-personas .personas h2{
+
+	color: white!important;
+}
+
+
+.administrar-servicios .contenedor-negocios-personas .personas p{
+	color: white!important;
+}
+
+/*============ELEMENTOS DEL CONTENEDOR DE PERSONAS Y NEGOCIOS===============*/
+
+
+
+.administrar-servicios .contenedor-negocios-personas .negocios h2,
+.administrar-servicios .contenedor-negocios-personas .personas h2{
+
+	color: #293C7A;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+
+.administrar-servicios .contenedor-negocios-personas .negocios h2 span,
+.administrar-servicios .contenedor-negocios-personas .personas h2 span{
+
+	font-weight: 300;
+	
+}
+
+
+
+.administrar-servicios .contenedor-negocios-personas .negocios p,
+.administrar-servicios .contenedor-negocios-personas .personas p{
+
+	margin-top: 1rem;
+	width: 100%;
+	color: #6C6C6C;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+
+
+
+
+.administrar-servicios .contenedor-negocios-personas .negocios .boton,
+.administrar-servicios .contenedor-negocios-personas .personas .boton{
+
+	display: inline-block;
+	margin-top: 3rem;
+}
+
+
+
+
+
+/*=========================================================
+
+						QUÉ HACEMOS ?
+=========================================================*/
+
+.que-hacemos{
+
+	background-image: url(../imagenes/servicios.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 300px;
+	margin-top:20rem;
+	padding-top: 3.5rem;
+
+
+}
+
+
+/*============CONTENEDOR TEXTO===============*/
+
+
+.que-hacemos .contenedor-texto{
+
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+
+}
+
+/*============ELEMENTOS DEL CONTENEDOR TEXTO===============*/
+
+.que-hacemos .contenedor-texto h2{
+
+	font-size: 2.5rem;
+	color: white;
+	font-weight: 300;
+}
+
+.que-hacemos .contenedor-texto h2 span{
+
+	border-bottom: 1px solid white;
+
+
+}
+
+/*=========================================================
+
+		QUÉ HACEMOS -	CONTENEDOR COMENTARIOS
+
+=========================================================*/
+
+.contenedor-comentarios{
+
+	background: white;
+	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+	padding: 4rem;
+	margin-top: 4rem;
+	border-radius: 5px;
+}
+
+
+
+
+/*==============ELEMENTOS DEL CONTENEDOR COMENTARIOS=============*/
+
+.contenedor-comentarios h3{
+
+	
+	text-align: center;
+	padding: 2rem 0 ;
+	font-size: 2.2rem;
+	color: #172460;
+	margin-bottom: 2rem;
+}
+
+
+.contenedor-comentarios > div{
+
+	display: grid;
+	grid-template-columns: 1fr 1fr ;
+	
+}
+
+
+/*==============TEXTO DEL CONTENEDOR  COMENTARIOS=============*/
+
+.contenedor-comentarios > div .texto-comentarios {
+
+	display: flex;
+	flex-direction: column;
+	row-gap:1.5rem;
+	border-right: 1px solid rgba(121,121,121,0.3);
+	padding-right: 2rem;
+
+}
+
+/*==============ELEMENTOS DEL CONTENEDOR TEXTO COMENTARIOS=============*/
+
+
+
+
+.contenedor-comentarios > div .texto-comentarios h4{
+
+	font-size: 1.4rem;
+	color: #172460
+}
+
+.contenedor-comentarios > div .texto-comentarios li{
+
+	color: #374278;
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: 300;
+	list-style: outside;
+}
+
+
+/*==============CONTENEDOR DONDE MUESTRO LOS COMENTARIOS=============*/
+
+.contenedor-comentarios > div .comentarios {
+
+	padding: 0 2rem 2rem 2rem ;	
+	row-gap:3rem;
+}
+
+
+/*==============ELEMENTOS DEL CONTENEDOR DONDE MUESTRO LOS COMENTARIOS=============*/
+
+
+.contenedor-comentarios > div .comentarios .comillas {
+
+	font-size: 3rem;
+	color: #1F48C1;
+
+}
+
+
+.contenedor-comentarios > div .comentarios p{
+
+	text-align: justify;
+	
+
+}
+
+
+
+/*============== CONTENEDOR DONDE MUESTRO LOS DATOS DEL USUARIO=============*/
+
+.contenedor-comentarios > div .comentarios .datos-usuario{
+
+	display: flex;
+	align-items: center;
+	column-gap: 2rem;
+	margin-top: 3rem;
+}
+
+
+/*==============ELEMENTOS DEL CONTENEDOR DONDE MUESTRO LOS DATOS DEL USUARIO=============*/
+
+.contenedor-comentarios > div .comentarios .datos-usuario img{
+
+	width: 100px;
+	border-radius: 50%;
+	border: 1px solid rgba(0,0,0,.5);
+}
+
+
+
+.contenedor-comentarios > div .comentarios  .datos-usuario .puesto-nombre{
+
+	display: flex;
+	flex-direction: column;
+	row-gap:.2rem;
+
+}
+
+/*==============ELEMENTOS DEL CONTENEDOR DONDE MUESTRO EL NOMBRE Y PUESTO DEL USUARIO=============*/
+
+
+.contenedor-comentarios > div .comentarios  .datos-usuario .puesto-nombre .nombre{
+
+	font-size: 20px;
+	color: #374278;
+	font-weight: 400;
+
+}
+
+.contenedor-comentarios > div .comentarios  .datos-usuario .puesto-nombre .puesto{
+
+	font-weight: 400;
+	color: #BCBCBC;
+}
+
+
+
+
+/*=========================================================
+
+				ÚLTIMOS CONOCIMIENTOS
+
+=========================================================*/
+
+.ultimos-conocimientos{
+
+
+	margin-top: 45rem;
+
+
+}
+
+
+/*==================ELEMENTOS DEL CONTENEDOR DE ULTIMOS CONOCIMIENTOS=================*/
+
+.ultimos-conocimientos h2{
+
+
+	color: #172460;
+	font-size: 2.5rem;
+	margin-bottom: 2.5rem;
+	
+
+}
+
+.ultimos-conocimientos  h2 span{
+
+
+	display: inline-block;
+	width: 50px;
+	border: 1px solid #172460;
+	margin-left: 1rem;
+
+
+}
+
+
+/*======================CONTENEDOR DE LAS CARTAS========================*/
+
+.ultimos-conocimientos .contenedor-cartas{
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 2rem;
+}
+
+
+/*======================CONTENEDOR DE LA CARTA========================*/
+
+
+.ultimos-conocimientos .contenedor-cartas .carta{
+
+	box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+
+/*======================ELEMENTOS DEL CONTENEDOR  CARTA========================*/
+
+
+
+.ultimos-conocimientos .contenedor-cartas .carta img {
+
+	width: 100%;
+}
+
+
+
+.ultimos-conocimientos .contenedor-cartas .carta .fecha-usuario{
+
+	display: flex;
+	column-gap: 1rem;	
+
+	justify-content: center;
+	padding: 1.5rem 0;
+	color: #BABABA;
+	font-size: 20px;
+
+
+}
+
+.ultimos-conocimientos .contenedor-cartas .carta .enlace-descripcion{
+
+
+	font-size: 25px;
+	display: block;
+	text-align: justify;
+	padding: 0 1rem;
+}
+
+
+.ultimos-conocimientos .contenedor-cartas .carta .enlace-leer-mas{
+
+	
+	display:block;
+	text-align: center;
+	padding: 1rem 0; 
+	
+	
+
+}
+
+
+/*=========================================================
+
+				CONSTRUIR
+
+=========================================================*/
+
+.construir{
+
+	background-image: url("../imagenes/contruir.jpg");
+	background-position: top right;
+	height: 400px;
+	margin-top: 6rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	
+
+}
+
+
+
+.construir .contenedor{
+
+
+	display: flex;
+	align-items: center;
+
+}
+
+/*=============ELEMENTOS DEL CONTENEDOR TEXTO==================*/
+
+.construir .texto h2{
+
+	color: white;
+	font-size: 2.2rem;
+	line-height: 2.4rem;
+	margin-bottom: 1rem;
+}
+
+.construir .texto p{
+
+	color: white;
+	line-height: 2rem;
+	font-size: 20px;
+	font-weight: 300;
+
+}
+
+/*=============CONTENEDOR DEL BOTON=================*/
+
+.construir .contenedor-boton{
+
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+
+
+}
+
+
+/*=============ELEMENTO DEL CONTENEDOR BOTON==================*/
+
+
+.construir .contenedor-boton .boton{
+
+	background: #2454ED;
+	color: white;
+}
+
+.construir .contenedor-boton .boton:hover{
+
+
+	background: #0E42ED;
+}
+
+
+
+
+
+
+
+
+
+/*=========================================================
+
+						FOOTER 
+
+=========================================================*/
+
+.footer {
+
+
+	background: #1A172D;
+	color: #AEAAC6;
+
+}
+
+/*===========CONTENEDOR DE INFORMACIÓN DE CONTACTO : UBICACIÓN , EMAIL , TELEFONO==================*/
+
+.footer .informacion-contacto {
+
+		background: #1D1A33;
+}
+
+
+.footer .informacion-contacto >div.contenedor{
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+
+}
+
+/*===========UBICACION , EMAIL , TELEFONO ==================*/
+
+.footer .informacion-contacto > div > div{
+
+	border-right: 1px solid #28253B;
+	
+	display: flex;
+	column-gap: 2rem;
+	padding: 1.5rem 0 1.5rem  1.5rem;
+	align-items: center;
+
+}
+
+/*===========CONTENEDOR TELEFONO ==================*/
+
+.footer .informacion-contacto > div  > div:last-child{
+
+	border-right: none;
+	
+
+}
+
+/*===========ICONO DE UBICACION , EMAIL , TELEFONO==================*/
+
+.informacion-contacto .icono-direccion i,
+.informacion-contacto .icono-email i{
+
+	font-size: 30px;
+}
+
+/*=========PARRAFO QUE ESTÁ AL COSTADO DEL ICONO DE TELEFONO , EMAIL , UBICACIÓN=======*/
+
+.informacion-contacto p{
+
+	line-height: 25px;
+	font-size: 17px;
+	font-weight: 400;
+
+}
+
+/*===========CONTENEDOR DE LOS DATOS DE LA EMPRESA ==================*/
+
+
+.datos-empresa{
+
+	display: flex;
+	justify-content: space-between;
+	column-gap: 2rem;
+	padding: 3rem 0 ;
+}
+
+
+
+.razon-empresa{
+
+	width: 28%;
+}
+
+
+/*IMAGEN Y PARRAFO DE LA RAZON DE LA EMPRESA*/
+
+.datos-empresa .razon-empresa img{
+
+
+	width: 150px;
+}
+
+.datos-empresa .razon-empresa p{
+
+	margin-top: 2rem;
+	font-weight: 300;
+	line-height: 30px;
+}
+
+
+
+
+/*CONTENEDOR DE DISTINTOS ENLACE DEL SITIO WEB*/
+
+.datos-empresa nav{
+
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	row-gap:1rem;
+}
+
+.datos-empresa a{
+
+	color:#AEAAC6;
+	font-weight: 300; 
+}
+
+
+/*INPUT DE CONTACTO*/
+
+
+.news{
+
+
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+	width: 30%;
+
+}
+
+
+/*ELEMENTOS DEL FORMULARIO , INPUT Y BUTTON*/
+
+.news .campo{
+
+display: flex;
+
+
+}
+
+.campo input , button{
+
+	border: none;
+}
+
+.campo input{
+
+	padding: 1rem 2rem;
+	width: 80%;
+	
+	font-weight: 300;
+	border-radius: 5px 0 0 5px;
+	font-size: 17px;
+}
+
+.campo button{
+
+	background: #43BAFF;
+	color: white;
+	width: 20%;
+	border-radius:0 5px  5px  0;
+}
+
+
+/*CONTENEDOR DE ENLACES A LAS DISTINTAS REDES SOCIALES*/
+
+.news nav{
+
+	display: flex;
+	flex-direction: row;
+	column-gap: 1rem;
+	font-size: 20px;
+	margin-top: 0;
+}
+
+.news nav a{
+	
+	border-radius: 50% ;
+	border: 1px solid #7F7E80;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #7F7E80;
+
+	transition: all .3s;
+}
+
+
+.news nav a:hover{
+
+
+	background: #43BAFF;
+	color: white;
+}
+
+
+
+/*CAJA DONDE INDICAMOS LOS DERECHOS RESERVADOS*/
+
+.copyright{
+
+	display: flex;
+	justify-content: space-between;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+	background: #1A172D;
+	border-top: 1px solid #28253B;
+	font-weight: 300;
+
+}
+
+/*BARRA DE NAVEGACION DE LOS DERECHOS RESERVADOS*/
+
+.copyright nav{
+
+	display: flex;
+	column-gap: 3rem;
+}
+
+.copyright nav a{
+
+	font-weight: 300;
+	color: #AEAAC6;
+
+
+
+}
+
+.modelo-basado a{
+
+	font-weight: bold!important;
+	color: white!important;
+}
